@@ -8,7 +8,7 @@ textfield = Entry(root, borderwidth=7, width=35)
 textfield.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
 
 #Number Function
-def button_click(number):
+def button_click(number): 
     current = textfield.get()
     textfield.delete(0, END)
     textfield.insert(0, current + number)
@@ -16,6 +16,19 @@ def button_click(number):
 #Delete Function
 def button_delete():
     textfield.delete(0, END)
+
+#Plus Function 
+def button_addition():
+    first = textfield.get()
+    global f_first
+    f_first = int(first)
+    textfield.delete(0, END)
+
+#Equal Function
+def button_equal():
+    second = textfield.get()
+    textfield.delete(0, END)
+    textfield.insert(0, f_first + int(second))
 
 #Define Buttons
 button_7 = Button(root, text="7", padx=35, pady=15, command=lambda: button_click("7"))
@@ -35,8 +48,8 @@ button_0 = Button(root, text="0", padx=35, pady=15, command=lambda: button_click
 button_divide = Button(root, text="/", padx=35, pady=15)
 button_multiply = Button(root, text="*", padx=35, pady=15)
 button_minus = Button(root, text="-", padx=35, pady=15)
-button_plus = Button(root, text="+", padx=35, pady=15)
-button_equals = Button(root, text="=", padx=165, pady=15)
+button_plus = Button(root, text="+", padx=35, pady=15, command=button_addition)
+button_equals = Button(root, text="=", padx=165, pady=15, command=button_equal)
 
 button_clear = Button(root, text="C", padx=35, pady=15, command=button_delete)
 button_dot = Button(root, text=".", padx=35, pady=15)
