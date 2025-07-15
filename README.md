@@ -38,7 +38,7 @@ tkinter_calculator/
 2. Klone das Repository:
 
 ```bash
-git clone https://github.com/DEIN_USERNAME/tkinter_calculator.git
+git clone https://github.com/keszamol/tkinter_calculator.git
 ```
 
 3. Starte das Programm:
@@ -57,5 +57,5 @@ python calculator.py
 
 ## ✉️ Kontakt
  
-- 🔗 [LinkedIn](https://www.linkedin.com/in/celine-maloszek-458a64359/)
+- 🔗 [LinkedIn](https://www.linkedin.com/in/celine-maloszek/)
 
