@@ -1,7 +1,9 @@
 from tkinter import *
 
 root = Tk()
-root.title("Simple Calculator") #Title
+
+#Title
+root.title("Simple Calculator") 
 
 #Textfield
 textfield = Entry(root, borderwidth=7, width=35)
@@ -21,14 +23,55 @@ def button_delete():
 def button_addition():
     first = textfield.get()
     global f_first
-    f_first = int(first)
+    global math
+    math = "addition"
+    f_first = float(first)
+    textfield.delete(0, END)
+
+#Minus Function
+def button_substraction():
+    first = textfield.get()
+    global f_first
+    global math
+    math = "substraction"
+    f_first = float(first)
+    textfield.delete(0, END)
+
+#Division Function
+def button_division():
+    first = textfield.get()
+    global f_first
+    global math
+    math = "division"
+    f_first = float(first)
+    textfield.delete(0, END)
+
+#Multiply Function
+def button_multiplication():
+    first = textfield.get()
+    global f_first
+    global math
+    math = "multiply"
+    f_first = float(first)
     textfield.delete(0, END)
 
 #Equal Function
 def button_equal():
     second = textfield.get()
     textfield.delete(0, END)
-    textfield.insert(0, f_first + int(second))
+
+    #Conditions
+    if math == "addition":
+        textfield.insert(0, f_first + float(second))
+
+    elif math == "substraction":
+        textfield.insert(0, f_first - float(second))
+
+    elif math == "division":
+        textfield.insert(0, f_first / float(second))
+
+    elif math == "multiply":
+        textfield.insert(0, f_first * float(second))
 
 #Define Buttons
 button_7 = Button(root, text="7", padx=35, pady=15, command=lambda: button_click("7"))
@@ -45,14 +88,16 @@ button_3 = Button(root, text="3", padx=35, pady=15, command=lambda: button_click
 
 button_0 = Button(root, text="0", padx=35, pady=15, command=lambda: button_click("0"))
 
-button_divide = Button(root, text="/", padx=35, pady=15)
-button_multiply = Button(root, text="*", padx=35, pady=15)
-button_minus = Button(root, text="-", padx=35, pady=15)
+button_dot = Button(root, text=".", padx=35, pady=15, command=lambda: button_click("."))
+
+button_divide = Button(root, text="/", padx=35, pady=15, command=button_division)
+button_multiply = Button(root, text="*", padx=35, pady=15, command=button_multiplication)
+button_minus = Button(root, text="-", padx=35, pady=15, command=button_substraction)
 button_plus = Button(root, text="+", padx=35, pady=15, command=button_addition)
 button_equals = Button(root, text="=", padx=165, pady=15, command=button_equal)
 
 button_clear = Button(root, text="C", padx=35, pady=15, command=button_delete)
-button_dot = Button(root, text=".", padx=35, pady=15)
+
 
 #Show Buttons
 button_7.grid(row=1, column=0)
