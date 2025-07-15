@@ -55,12 +55,6 @@ python calculator.py
 - Umgang mit Layouts und Benutzerinteraktion
 - Fehlerbehebung in GUI-Anwendungen
 
-## ✨ Nächste Schritte
-
-- Unterstützung für Tastatureingaben
-- Verbesserte Benutzeroberfläche (Farben, Schriftarten, Design)
-- Erweiterung um wissenschaftliche Funktionen (z. B. Wurzeln, Prozent)
-
 ## ✉️ Kontakt
  
 - 🔗 [LinkedIn](https://www.linkedin.com/in/celine-maloszek-458a64359/)
