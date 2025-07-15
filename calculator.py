@@ -4,37 +4,42 @@ root = Tk()
 root.title("Simple Calculator") #Title
 
 #Textfield
-Textfield = Entry(root, borderwidth=7, width=35)
-Textfield.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
+textfield = Entry(root, borderwidth=7, width=35)
+textfield.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
 
-#Button function
-def button_click():
-    
-    return
+#Number Function
+def button_click(number):
+    current = textfield.get()
+    textfield.delete(0, END)
+    textfield.insert(0, current + number)
+
+#Delete Function
+def button_delete():
+    textfield.delete(0, END)
 
 #Define Buttons
-button_7 = Button(root, text="7", padx=35, pady=15, command=button_click)
-button_8 = Button(root, text="8", padx=35, pady=15, command=button_click)
-button_9 = Button(root, text="9", padx=35, pady=15, command=button_click)
+button_7 = Button(root, text="7", padx=35, pady=15, command=lambda: button_click("7"))
+button_8 = Button(root, text="8", padx=35, pady=15, command=lambda: button_click("8"))
+button_9 = Button(root, text="9", padx=35, pady=15, command=lambda: button_click("9"))
 
-button_4 = Button(root, text="4", padx=35, pady=15, command=button_click)
-button_5 = Button(root, text="5", padx=35, pady=15, command=button_click)
-button_6 = Button(root, text="6", padx=35, pady=15, command=button_click)
+button_4 = Button(root, text="4", padx=35, pady=15, command=lambda: button_click("4"))
+button_5 = Button(root, text="5", padx=35, pady=15, command=lambda: button_click("5"))
+button_6 = Button(root, text="6", padx=35, pady=15, command=lambda: button_click("6"))
 
-button_1 = Button(root, text="1", padx=35, pady=15, command=button_click)
-button_2 = Button(root, text="2", padx=35, pady=15, command=button_click)
-button_3 = Button(root, text="3", padx=35, pady=15, command=button_click)
+button_1 = Button(root, text="1", padx=35, pady=15, command=lambda: button_click("1"))
+button_2 = Button(root, text="2", padx=35, pady=15, command=lambda: button_click("2"))
+button_3 = Button(root, text="3", padx=35, pady=15, command=lambda: button_click("3"))
 
-button_0 = Button(root, text="0", padx=35, pady=15, command=button_click)
+button_0 = Button(root, text="0", padx=35, pady=15, command=lambda: button_click("0"))
 
-button_divide = Button(root, text="/", padx=35, pady=15, command=button_click)
-button_multiply = Button(root, text="*", padx=35, pady=15, command=button_click)
-button_minus = Button(root, text="-", padx=35, pady=15, command=button_click)
-button_plus = Button(root, text="+", padx=35, pady=15, command=button_click)
-button_equals = Button(root, text="=", padx=165, pady=15, command=button_click)
+button_divide = Button(root, text="/", padx=35, pady=15)
+button_multiply = Button(root, text="*", padx=35, pady=15)
+button_minus = Button(root, text="-", padx=35, pady=15)
+button_plus = Button(root, text="+", padx=35, pady=15)
+button_equals = Button(root, text="=", padx=165, pady=15)
 
-button_clear = Button(root, text="C", padx=35, pady=15, command=button_click)
-button_dot = Button(root, text=".", padx=35, pady=15, command=button_click)
+button_clear = Button(root, text="C", padx=35, pady=15, command=button_delete)
+button_dot = Button(root, text=".", padx=35, pady=15)
 
 #Show Buttons
 button_7.grid(row=1, column=0)
