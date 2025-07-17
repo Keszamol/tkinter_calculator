@@ -34,7 +34,7 @@ tkinter_calculator/
 
 ## 💡 So startest du das Projekt
 
-# Möglichkeit 1:
+### Möglichkeit 1:
 
 1. Stelle sicher, dass Python 3 auf deinem Rechner installiert ist.
 2. Klone das Repository:
@@ -50,7 +50,7 @@ cd tkinter_calculator
 python calculator.py
 ```
 
-# Möglichkeit 2:
+### Möglichkeit 2:
 
 -> Ich habe mit pyinstall eine .exe erstellt, diese findest du im /dist Ordner. Somit musst du Python nicht vorinstallieren. !! #
 
