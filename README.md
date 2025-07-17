@@ -52,7 +52,7 @@ python calculator.py
 
 ### Möglichkeit 2:
 
--> Ich habe mit pyinstall eine .exe erstellt, diese findest du im /dist Ordner. Somit musst du Python nicht vorinstallieren. !! #
+-> Ich habe mit pyinstall eine .exe erstellt, diese findest du im /dist Ordner. Somit musst du Python nicht vorinstallieren.
 
 ## 📚 Was ich dabei lerne
 
