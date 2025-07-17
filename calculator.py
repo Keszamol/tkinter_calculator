@@ -98,7 +98,6 @@ button_equals = Button(root, text="=", padx=165, pady=15, command=button_equal)
 
 button_clear = Button(root, text="C", padx=35, pady=15, command=button_delete)
 
-
 #Show Buttons
 button_7.grid(row=1, column=0)
 button_8.grid(row=1, column=1)
